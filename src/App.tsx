@@ -47,8 +47,8 @@ function App() {
             {
                 word: 'dance',
                 translation: 'танцевать',
-                image: '../assets/img/dance.jpg',
-                audioSrc: '../assets/audio/dance.mp3',
+                image: './assets/img/dance.jpg',
+                audioSrc: './assets/audio/dance.mp3',
                 id: v1()
             },
             {
