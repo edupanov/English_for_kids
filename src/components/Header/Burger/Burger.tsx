@@ -19,6 +19,7 @@ function Burger(props: PropsType) {
             <LeftNav
                 open={open}
                 tittle={props.title}
+                setOpen={setOpen}
             />
 
         </>

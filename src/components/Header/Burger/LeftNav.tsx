@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Dispatch, SetStateAction} from 'react';
 import styled from "styled-components";
 import {Link, NavLink} from "react-router-dom";
 import {CategoriesType} from "../../../App";
@@ -6,6 +6,7 @@ import {CategoriesType} from "../../../App";
 type ListType = {
     open: boolean
     tittle: CategoriesType[]
+    setOpen: Dispatch<SetStateAction<boolean>>
 }
 
 const Ul = styled.ul<{ open: boolean }>`
@@ -42,9 +43,11 @@ function LeftNav(props: ListType) {
 
     return (
         <Ul open={props.open}>
-            <Link className='main' to={"/main"}>Main page</Link>
+            <Link className='main' to={"/main"} onClick={() => props.setOpen(!props.open)}>Main page</Link>
             {
-                props.tittle.map((m) => <li key={m.id}><NavLink to={m.link}>{m.title}</NavLink></li>)
+                props.tittle.map((m) =>
+                    <li key={m.id} onClick={() => props.setOpen(!props.open)}><NavLink to={m.link}>{m.title}</NavLink></li>
+                )
             }
         </Ul>
     );
