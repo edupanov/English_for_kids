@@ -1,8 +1,6 @@
 import React from 'react';
 import {CardType} from "../../App";
 import GameCard from "./GameCard";
-import { StyledMainCard } from '../../styles/StyledMainCard';
-import { StyledCard } from '../../styles/StyledCard';
 import {StyledGameCard} from "../../styles/StyledGameCard";
 
 
