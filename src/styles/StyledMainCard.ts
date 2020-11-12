@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import bgcImage from '../assets/img/learn-english.jpg'
 
 export const StyledMainCard = styled.div`
     max-width: 300px;
@@ -49,16 +50,18 @@ export const StyledMainCard = styled.div`
           backface-visibility: hidden;
           border-radius: 10px;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          background-image: url(https://1stwebdesigner.com/wp-content/uploads/2019/07/css-background-effects-thumb.jpg);
+          background-image: url(${bgcImage});
           background-size: cover;
           background-position: center;
         }
 
         .card-title {
           padding: 1rem;
-          background-color: #fff8;
+          background-color: #E83B35;
+          color: #ffeb00;
           text-transform: capitalize;
-          margin: 20px 0 0;
+          margin:0;
+          border-radius: 0 0 60px 60px;
         }
       }
 `
