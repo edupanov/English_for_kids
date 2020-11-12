@@ -4,6 +4,7 @@ import {StyledCategories} from "../../styles/StyledCategories";
 import MainPage from "./MainPage";
 import Cards from "./Cards";
 import {CardType, CategoriesType} from "../../App";
+import GameCards from "../Game/GameCards";
 
 type StudyType = {
     title: CategoriesType[]
@@ -46,7 +47,7 @@ function Study(props:StudyType) {
                                 <Route key={c.id} path={'/' + c.link}
                                        render={(props) =>
                                            <StyledCategories>
-                                               <Cards {...props}
+                                               <GameCards {...props}
                                                          cards={cardsForTitle}
                                                />
                                            </StyledCategories>

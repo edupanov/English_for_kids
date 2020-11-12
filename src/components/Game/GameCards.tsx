@@ -1,30 +1,32 @@
 import React from 'react';
-import Card from "./Card";
-import {StyledCard} from "../../styles/StyledCard";
 import {CardType} from "../../App";
+import GameCard from "./GameCard";
+import {StyledGameCard} from "../../styles/StyledGameCard";
+
+
 
 export type CardsType = {
     cards: CardType[];
 }
 
-function Cards(props: CardsType) {
-       return (
+function GameCards(props: CardsType) {
+    return (
         <>
             {
                 props.cards.map(t =>
-                   <StyledCard key={t.id}>
-                        <Card
+                    <StyledGameCard key={t.id}>
+                        <GameCard
                             word={t.word}
                             translation={t.translation}
                             image={t.image}
                             audioSrc={t.audioSrc}
                             id={t.id}
                         />
-                    </StyledCard>
+                    </StyledGameCard>
                 )
             }
         </>
     );
 }
 
-export default Cards;
+export default GameCards;
