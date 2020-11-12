@@ -11,16 +11,13 @@ function Card(props: CardType) {
 
     return (
         <>
-            {
-                <div
-                    className="card__inner"
-                    onMouseEnter={() => {
-                        play()
-                    }}
-                    onMouseLeave={() => {
-                        stop()
-                    }}
-                >
+            {<div onMouseEnter={() => {
+                play()
+            }}
+                  onMouseLeave={() => {
+                      stop()
+                  }}>
+                <div className="card__inner">
                     <div className="card--front"
                          style={{backgroundImage: `url(${props.image})`}}
                     >
@@ -31,6 +28,7 @@ function Card(props: CardType) {
                         <h2 className='card__title'>{props.translation}</h2>
                     </div>
                 </div>
+            </div>
             }
         </>
     );

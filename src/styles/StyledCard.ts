@@ -9,8 +9,8 @@ export const StyledCard = styled.div`
   
       .card__inner {
         position: relative;
-        width: 100%;
-        height: 100%;
+        min-width: 300px;
+        min-height: 260px;
         text-align: center;
         transition: transform 0.6s;
         transform-style: preserve-3d;
