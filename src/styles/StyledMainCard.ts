@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledCategories = styled.div`
+export const StyledMainCard = styled.div`
     max-width: 300px;
     width: 100%;
     height: 260px;
@@ -52,10 +52,6 @@ export const StyledCategories = styled.div`
           background-image: url(https://1stwebdesigner.com/wp-content/uploads/2019/07/css-background-effects-thumb.jpg);
           background-size: cover;
           background-position: center;
-        }
-
-        .card-front {
-          background-color: #bbb;
         }
 
         .card-title {

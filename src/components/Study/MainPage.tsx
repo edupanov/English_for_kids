@@ -1,9 +1,9 @@
 import React from 'react';
-import {StyledCategories} from "./Styled.categories";
+import {StyledMainCard} from "../../styles/StyledMainCard";
 import {CategoriesType} from "../../App";
 import {Link} from "react-router-dom";
 
-type MainCardType = {
+export type MainCardType = {
     tittle: CategoriesType[]
 }
 
@@ -12,7 +12,7 @@ function MainPage(props: MainCardType) {
         <>
                         {
                 props.tittle.map(c =>
-                    <StyledCategories key={c.id}>
+                    <StyledMainCard key={c.id}>
                         <Link className="link" to={c.link}>
                             <div className="card-inner">
                                 <div className="card-front">
@@ -20,7 +20,7 @@ function MainPage(props: MainCardType) {
                                 </div>
                             </div>
                         </Link>
-                    </StyledCategories>)
+                    </StyledMainCard>)
             }
         </>
     );

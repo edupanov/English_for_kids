@@ -1,14 +1,9 @@
-import React from 'react';
 import styled from "styled-components";
 
-type ButtonType  = {
-    isOn: boolean
-    handleToggle: () => void
-}
-
-const StyledCheckbox = styled.div<{ isOn: boolean }>`
-position: relative;
-right: 50px;
+export const StyledCheckbox = styled.div<{ isOn: boolean }>`
+position: absolute;
+top: 8px;
+right: 3vw;
 .react-switch-checkbox {
   height: 0;
   width: 0;
@@ -18,11 +13,13 @@ right: 50px;
 content: 'Off';
 position: relative;
 right: 45px;
+z-index: 20;
 }
 .react-switch-label:after {
 position: relative;
 right: -50px;
 content: 'Play';
+z-index: 20;
 }
 .react-switch-label {
   display: flex;
@@ -32,13 +29,13 @@ content: 'Play';
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-      font-size: 1.5rem;
-
+  font-size: 1.5rem;
   width: 80px;
   height: 40px;
   background: ${({isOn}) => !isOn ? '#646464' : '#e2d211'};
   border-radius: 80px;
   transition: background-color .2s;
+  z-index: 20;
 
   .react-switch-button {
     content: '';
@@ -63,25 +60,3 @@ content: 'Play';
   width: 60px;
 }
 `
-
-function Button(props:ButtonType) {
-    return (
-            <StyledCheckbox isOn={props.isOn}>
-                <input
-                    checked={props.isOn}
-                    onChange={props.handleToggle}
-                    className="react-switch-checkbox"
-                    id={`react-switch-new`}
-                    type="checkbox"
-                />
-                <label
-                    className="react-switch-label"
-                    htmlFor={`react-switch-new`}
-                >
-                    <span className={`react-switch-button`}/>
-                </label>
-            </StyledCheckbox>
-    );
-}
-
-export default Button;

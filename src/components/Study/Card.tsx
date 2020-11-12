@@ -1,6 +1,6 @@
 import React from 'react';
 import useSound from "use-sound";
-import {CardType} from "./Cards";
+import {CardType} from "../../App";
 
 
 function Card(props: CardType) {
